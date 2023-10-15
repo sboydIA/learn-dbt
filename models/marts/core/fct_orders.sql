@@ -20,7 +20,7 @@ final as (
         orders.customer_id,
         orders.order_date,
         coalesce(order_payments.amount, 0) as amount
-    from order
+    from orders
     left join order__payments using order_id
 )
 
